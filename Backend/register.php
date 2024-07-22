@@ -57,7 +57,7 @@ echo '
 }
 ?>
 
-   <div class=" form-container">
+   <!-- <div class=" form-container">
 <h1 class="text-center">signup</h1>
     <form action="" method="post">
 
@@ -87,4 +87,4 @@ echo '
     </form>
    </div> 
 </body>
-</html>
+</html> -->
