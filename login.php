@@ -1,6 +1,8 @@
 <?php
 require 'database.php'; // Include the database connection file
 
+$loginSuccess = false;
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -15,9 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Verify the password
     if (password_verify($password, $hashed_password)) {
-        echo "Login successful!";
+        $loginSuccess = true;
     } else {
-        echo "Invalid credentials!";
+        echo "<script>alert('Invalid credentials!');</script>";
     }
 
     $stmt->close();
@@ -43,15 +45,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 <nav>
                     <ul id="MenuItems">
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="Books.html">Books</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="Books.php">Books</a></li>
                         <li><a href="About.html">About Us</a></li>
                         <li><a href="Contact.html">Contact Us</a></li>
                     </ul>
                 </nav>
                 <div class="right">
-                    <a href="login.html"> <button class="btn" id="loginBtn">Log In</button> </a>
-                    <a href="signup.html"><button class="btn" id="signupBtn">Sign Up</button></a>
+                    <a href="login.php"><button class="btn" id="loginBtn">Log In</button></a>
+                    <a href="signup.php"><button class="btn" id="signupBtn">Sign Up</button></a>
                 </div>
                 <img src="cart.png" width="30px" height="30px">
                 <img src="menu.png" width="28px" height="20px" class="menu-icon" onclick="menutoggle()">
@@ -74,5 +76,56 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
         </form>
     </div>
+
+    <?php if ($loginSuccess): ?>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <h2>Login Successful!</h2>
+                <p>You will be redirected to the home page shortly.</p>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <script>
+        // Show popup if login was successful
+        <?php if ($loginSuccess): ?>
+            document.getElementById('popup').style.display = 'block';
+            setTimeout(function() {
+                window.location.href = 'index.php';
+            }, 3000); // Redirect after 3 seconds
+        <?php endif; ?>
+    </script>
+
+    <style>
+        .popup {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        .popup-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+            text-align: center;
+        }
+
+        .popup-content h2 {
+            color: green;
+        }
+
+        .popup-content p {
+            color: #555;
+        }
+    </style>
 </body>
 </html>
