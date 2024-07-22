@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Books-Book Companion</title>
+    <title>Book Companion</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header -->
-    
+    <div class="header">
         <div class="container">
             <div class="navbar">
                 <div class="logo">
@@ -16,48 +16,50 @@
                 </div>
                 <nav>
                     <ul id="MenuItems">
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="Books.html" class="active">Books</a></li>
+                        <li><a href="home.html" class="active">Home</a></li>
+                        <li><a href="Books.php">Books</a></li>
                         <li><a href="About.html">About Us</a></li>
                         <li><a href="Contact.html">Contact Us</a></li>
                     </ul>
                 </nav>
                 <div class="right">
-                    <button class="btn" id="loginBtn">Log In</button>
-                    <button class="btn" id="signupBtn">Sign Up</button>
+                    <a href="login.html"> <button class="btn" id="loginBtn">Log In</button>
+                      <a href="signup.html" ><button class="btn" id="signupBtn">Sign Up</button>
                 </div>
                 <img src="cart.png" width="30px" height="30px">
                 <img src="menu.png" width="28px" height="20px" class="menu-icon" onclick="menutoggle()">
             </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1>Reading Made Affordable <br>and Easy.</h1>
+                    <p>Rent books and save money.</p>
+                </div>
+                <div class="col-2">
+                    <img src="bg6.jpg">
+                </div>
             </div>
-            
-                <div class="small-container">
-                    <div class="row row-2">
-                        <h2>All Books</h2>
-                        <select>
-                            <option>Default Sorting</option>
-                            <option> Sort By Price</option>
-                            <option>Sort By Popularity</option>
-                        
-                        </select>
+        </div>
+    </div>
+        <!-- Featured Categories -->
+        <div class="categories">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="book.jpeg">
                     </div>
-                    <div class="row">
-                        <div class="col-3">
-                            <img src="book.jpeg">
-                        </div>
-                        <div class="col-3">
-                            <img src="bk1.jpeg">
-                        </div>
-                        <div class="col-3">
-                            <img src="bk2.jpg">
-                        </div>
-                        <div class="col-3">
-                            <img src="bk2.jpg">
-                        </div>
+                    <div class="col-3">
+                        <img src="bk1.jpeg">
+                    </div>
+                    <div class="col-3">
+                        <img src="bk2.jpg">
                     </div>
                 </div>
-                <div class="small-container">
-           
+            </div>
+        </div>
+    
+        <!-- Romance Section -->
+        <div class="small-container">
+            <h2 class="title">Romance</h2>
             <div class="row">
                 <div class="col-4">
                     <img src="bk1.jpeg">
@@ -84,7 +86,7 @@
     
         <!-- Sci-fi Section -->
         <div class="small-container">
-            
+            <h2 class="title">Sci-fi</h2>
             <div class="row">
                 <div class="col-4">
                     <img src="bk1.jpeg">
@@ -111,7 +113,7 @@
     
         <!-- Non-fiction Section -->
         <div class="small-container">
-            
+            <h2 class="title">Non-fiction</h2>
             <div class="row">
                 <div class="col-4">
                     <img src="bk1.jpeg">
@@ -155,15 +157,10 @@
                     <h4>Candice</h4>
                     <p>Rs.100</p>
                 </div>
-            </div>
-            <div class="page-btn">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
             </div>
         </div>
-            
-            <!-- Footer -->
+    
+        <!-- Footer -->
         <div class="footer">
             <div class="row">
                 <div class="footer-col-1">
@@ -183,67 +180,5 @@
             <p class="copyright">Copyright 2024- Book Companion</p>
         </div>
 
-    <!-- Login Modal -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="closeLogin">&times;</span>
-            <form>
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <div class="form-group">
-                    <button type="submit">Log In</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Sign Up Modal -->
-    <div id="signupModal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="closeSignup">&times;</span>
-            <form>
-                <div class="form-group">
-                    <label for="new-username">Username</label>
-                    <input type="text" id="new-username" name="username" required>
-                </div>
-                <div class="form-group">
-                    <label for="new-password">Password</label>
-                    <input type="password" id="new-password" name="password" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="Confirm-password">Confirm-password</label>
-                    <input type="Confirm-password" id="Confirm-password" name="Confirm-password" required>
-                </div>
-                <div class="form-group">
-                    <label for="user-type">User Type</label>
-                    <select id="user-type" name="user-type" required>
-                        <option value="rentee">Rentee</option>
-                        <option value="renter">Renter</option>
-                        <option value="admin">Admin</option>
-                    </select>
-                <div class="form-group">
-                    <button type="submit">Sign Up</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    
-
-    <script src="book.js"></script>
 </body>
 </html>
