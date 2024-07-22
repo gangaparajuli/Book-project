@@ -16,14 +16,14 @@
                 </div>
                 <nav>
                     <ul id="MenuItems">
-                        <li><a href="home.html" class="active">Home</a></li>
+                        <li><a href="index.php" class="active">Home</a></li>
                         <li><a href="Books.php">Books</a></li>
                         <li><a href="About.html">About Us</a></li>
                         <li><a href="Contact.html">Contact Us</a></li>
                     </ul>
                 </nav>
                 <div class="right">
-                    <a href="login.html"> <button class="btn" id="loginBtn">Log In</button>
+                    <a href="login.php"> <button class="btn" id="loginBtn">Log In</button>
                       <a href="signup.html" ><button class="btn" id="signupBtn">Sign Up</button>
                 </div>
                 <img src="cart.png" width="30px" height="30px">
