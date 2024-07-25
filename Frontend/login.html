@@ -1,12 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login- Book Companion</title>
+    <title>Login - Book Companion</title>
     <link rel="stylesheet" href="style.css">
-
+</head>
+<body>
     <!-- Header -->
     <div class="header">
         <div class="container">
@@ -23,14 +23,15 @@
                     </ul>
                 </nav>
                 <div class="right">
-                    <a href="login.html"> <button class="btn" id="loginBtn">Log In</button> </a>
-                    <a href="signup.html" ><button class="btn" id="signupBtn">Sign Up</button></a>
+                    <a href="login.html"><button class="btn" id="loginBtn">Log In</button></a>
+                    <a href="signup.html"><button class="btn" id="signupBtn">Sign Up</button></a>
                 </div>
                 <img src="cart.png" width="30px" height="30px">
                 <img src="menu.png" width="28px" height="20px" class="menu-icon" onclick="menutoggle()">
             </div>
         </div>
     </div>
+
     <div class="login-container">
         <h2>Login</h2>
         <form action="login.php" method="post">
@@ -43,10 +44,9 @@
                 <input type="password" id="password" name="password" required>
             </div>
             <div class="form-group">
-                <button type="submit">Log In</button>
+                <button type="submit" name="submit">Log In</button>
             </div>
         </form>
     </div>
-
-</head>
+</body>
 </html>

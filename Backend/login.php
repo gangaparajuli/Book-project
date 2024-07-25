@@ -42,25 +42,6 @@ $message[] = 'incorrect password!';
     }
 }
 
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
-
-<!-- font awesome cdn link-->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/front-awesome/6.0.0/css/all.min.css">
-
- <!-- custom css file link-->
-  <link rel="stylesheet" href="css/style.css">
-
-</head>
-<body>
-  
-<?php 
 
 if(isset($message)){
     foreach($message as $message){
@@ -72,26 +53,3 @@ echo '
 ';
     }
 }
-?>
-
-   <div class="form-container">
-
-    <form action="" method="post">
-        <h3> login now</h3>
-
-        <label for="name">name</label>
-        <input type = "text" name="name" placeholders="enter your name" required class="box">
-        
-        <label for="email">email</label>
-        <input type ="email" name="email" placeholder=" enter your email"  required class="box">
-        
-        <label for="password">password</label>
-        <input type = "password" name="password" placeholders="enter your password" required class="box">
-        
-        <input type ="submit" name ="submit" value="login now" class="btn">
-        <p> don't have a account? <a href ="signup.php"> signup now</a></p>
-
-    </form>
-   </div> 
-</body>
-</html>
