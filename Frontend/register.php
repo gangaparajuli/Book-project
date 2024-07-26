@@ -16,15 +16,15 @@ if(isset($_POST['submit'])){
     //query the database to check if a user with the given username and email already exists.
     $select_users_username = mysqli_query($conn, "SELECT * FROM `users` WHERE name = '$username'") or die('query failed');
 
-    $select_users_email = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email'") or die('query failed');
+    $select_users_password = mysqli_query($conn, "SELECT * FROM `users` WHERE password = '$password'") or die('query failed');
 
     //check if the username already exists.
     if(mysqli_num_rows($select_users_username) > 0){
         $message[] = 'User with this username already exists!';
 
         //check if the password already exists.
-    }elseif(mysqli_num_rows($select_users_email)>0){
-        $message[] = 'User with this email already exists!';
+    }elseif(mysqli_num_rows($select_users_password)>0){
+        $message[] = 'User with this password already exists!';
     } 
     else {
         if($password != $confirm_password){
