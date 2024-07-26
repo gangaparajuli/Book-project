@@ -387,5 +387,19 @@ select:focus{
     display: inline-block;
     width: 100px;
 }
+/* Css for About US page */
+.about-us{
+    background-color: white;
 
+}
+h1 h2{
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+    color:hwb(240 1% 80% / 0.845) ;
+}
+p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
 
