@@ -13,7 +13,7 @@ if(isset($_POST['submit'])){
     $user_type = $_POST['user-type'];
 
 
-    //query the database to check if a user with the given username and email already exists.
+    //query the database to check if a user with the given username and password already exists.
     $select_users_username = mysqli_query($conn, "SELECT * FROM `users` WHERE name = '$username'") or die('query failed');
 
     $select_users_password = mysqli_query($conn, "SELECT * FROM `users` WHERE password = '$password'") or die('query failed');
