@@ -169,10 +169,9 @@ ul{
 }
 .menu-icon{
 margin-left: 30px;
-padding:20px;
-display: inline-block;
+padding:35px;
+display: none;
 cursor: pointer;
-
 }
 /* All Products */
 .row-2{
@@ -230,8 +229,8 @@ select:focus{
         color: white;
     }
     .menu-icon{
+        display: block;
         cursor: pointer;
-        display:block;
 
     }
 }
