@@ -168,10 +168,13 @@ ul{
 .copyright{
     text-align :center ;
 }
-.menu-icon{
+.icons{
+    padding: 20px;
+}
+.menu-icon{    
 margin-left: 30px;
 padding:35px;
-display: none;
+display: block;
 cursor: pointer;
 }
 /* All Products */
