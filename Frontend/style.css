@@ -6,7 +6,7 @@
 .navbar{
     display: flex;
     align-items:center;
-    padding:20px;
+    padding:30px;
 
 }
 nav{
@@ -142,6 +142,7 @@ h4{
 .footer p{
     color:white;
     font-size:14px;
+    text-align: center;
 }
 .footer-col-1, .footer-col-2{
     min-width: 250px;
@@ -212,10 +213,10 @@ select:focus{
         position: absolute;
         top: 70px;
         left: 0;
-        background: hwb(240 1% 80% / 0.845);
         width: 100%;
         overflow:hidden;
         transition: max-height 0.5s;
+        text-align: right;
 
     }
     nav ul li{
@@ -226,7 +227,7 @@ select:focus{
 
     }
     nav ul li a{
-        color: white;
+        color:hwb(240 1% 80% / 0.845);
     }
     .menu-icon{
         display: block;
