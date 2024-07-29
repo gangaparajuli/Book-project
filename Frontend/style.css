@@ -6,7 +6,7 @@
 .navbar{
     display: flex;
     align-items:center;
-    padding:30px;
+    padding:35px;
 
 }
 nav{
@@ -168,12 +168,10 @@ ul{
 .copyright{
     text-align :center ;
 }
-.icons{
-    padding: 20px;
-}
+
 .menu-icon{    
 margin-left: 30px;
-padding:35px;
+padding: 35px;
 display: block;
 cursor: pointer;
 }
@@ -217,7 +215,7 @@ select:focus{
         top: 70px;
         left: 0;
         width: 100%;
-        overflow:hidden;
+        overflow: hidden;
         transition: max-height 0.5s;
         text-align: right;
 
