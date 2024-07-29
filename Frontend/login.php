@@ -19,23 +19,23 @@ include 'config.php';
 
     //check the user type and set session variables accordingly.
 if($row['user_type'] == 'admin'){
-   $_SESSION['admin_name'] = $row['name'];
-    $_SESSION ['admin_password'] =$row['password'];
-    $_SESSION['admin_id'] = $row['id'];
-    header("location:admin_page.html");
+   $_SESSION['user_name'] = $row['name'];
+   $_SESSION['user_password'] = $row['password'];
+    $_SESSION['user_id'] = $row['id'];
+    header("location:admin_page.php");
 }
-elseif($row['user_type'] == 'Rentee'){
-   $_SESSION['renter_name'] = $row['name'];
-    $_SESSION ['renter_password'] =$row['password'];
-    $_SESSION['rentee_id'] = $row['id'];
+elseif($row['user_type'] == 'rentee'){
+   $_SESSION['user_name'] = $row['name'];
+    $_SESSION ['user_password'] =$row['password'];
+    $_SESSION['user_id'] = $row['id'];
 header("location:home.html");
 }
 
-elseif($row['user_type'] == 'Renter'){
-  $_SESSION['rentee_name'] = $row['name'];
-   $_SESSION ['rentee_password'] =$row['password'];
-    $_SESSION['renter_id'] = $row['id'];
-header("location:home_page.html");
+elseif($row['user_type'] == 'renter'){
+  $_SESSION['user_name'] = $row['name'];
+   $_SESSION ['user_password'] =$row['password'];
+    $_SESSION['user_id'] = $row['id'];
+header("location:home.html");
 }
 
 }else{
