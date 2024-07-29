@@ -17,25 +17,25 @@ include 'config.php';
 
     $row = mysqli_fetch_assoc($select_users);
 
-    //checkthe user type and set session variables accordingly.
+    //check the user type and set session variables accordingly.
 if($row['user_type'] == 'admin'){
    $_SESSION['admin_name'] = $row['name'];
     $_SESSION ['admin_password'] =$row['password'];
     $_SESSION['admin_id'] = $row['id'];
-    header('location:admin_page.html');
+    header("location:admin_page.html");
 }
 elseif($row['user_type'] == 'Rentee'){
    $_SESSION['renter_name'] = $row['name'];
     $_SESSION ['renter_password'] =$row['password'];
     $_SESSION['rentee_id'] = $row['id'];
-header('location:home.html');
+header("location:home.html");
 }
 
 elseif($row['user_type'] == 'Renter'){
   $_SESSION['rentee_name'] = $row['name'];
    $_SESSION ['rentee_password'] =$row['password'];
     $_SESSION['renter_id'] = $row['id'];
-header('location:home.html');
+header("location:home_page.html");
 }
 
 }else{
