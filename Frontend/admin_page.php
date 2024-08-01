@@ -15,6 +15,7 @@ if(!isset($admin_id)){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>admin panel</title>
 
@@ -35,6 +36,7 @@ if(!isset($admin_id)){
     <h1 class="title">dashboard</h1>
     
    <div class="box-container">
+   
    <div class="box">
     <?php
 $total_pendings = 0;
@@ -126,6 +128,15 @@ if(mysqli_num_rows($select_pending) > 0){
     ?>
     <h3><?php echo $number_of_messages;?></h3>
    <p>new messages</p>
+</div>
+
+<div class="box">
+    <?php
+    $select_returned_books = mysqli_query($conn, "SELECT * FROM `returned_books`") or die('query failed');
+    $number_returned_books = mysqli_num_rows($select_returned_books);
+    ?>
+    <h3><?php echo $number_returned_books;?></h3>
+    <p>returned books</p>
 </div>
 </div>
 </section>

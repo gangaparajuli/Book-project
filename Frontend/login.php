@@ -19,6 +19,7 @@ include 'config.php';
 
     //check the user type and set session variables accordingly.
 if($row['user_type'] == 'admin'){
+   
    $_SESSION['user_name'] = $row['name'];
    $_SESSION['user_password'] = $row['password'];
     $_SESSION['user_id'] = $row['id'];
