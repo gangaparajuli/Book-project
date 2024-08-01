@@ -55,6 +55,7 @@ if(isset($_GET['delete'])){
     <a  href="admin_users.php?delete=<?php echo $fetch_users['id']; ?>" onclick="return confirm('delete this user?');"
     class="delete-btn">Delete user</a>
     </div>
+
     <?php
     };
     ?>

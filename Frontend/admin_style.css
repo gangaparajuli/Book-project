@@ -447,12 +447,13 @@ section {
 
 .users .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, 30rem);
     justify-content: center;
-    gap: 1.5rem;
+    gap: 5rem;
     max-width: 12000px;
     margin: 0 auto;
-    padding: 1.2rem 1.4rem;
+    padding: 2rem;
+    display: flex;
+    align-items:flex-start;
     
 }
 
@@ -462,39 +463,25 @@ section {
     border: var(--border);
     box-shadow: var(--box-shadow);
     border-radius: .5rem;
+    text-align: center;
 }
 
 .users .box-container .box p{
     padding-bottom: 1.5rem;
-    font-size: 1.2rem;
+    font-size:2rem;
     color: var(--light-color);
 }
-
-
+ 
 .users .box-container .box p span{
     color: var(--purple);
 }
 
 .users .box-container .box .delete-btn{
     margin-top: 0;
+    display: inline-block;
+    padding: 10px 15px;
+
 }
-
-.users .box-container .box form{
-    text-align: center;
-}
-
-.users .box-container .box form select{
-    border-radius: .5rem;
-    margin: .5rem 0;
-    width: 100%;
-    background-color: var(--light-bg);
-    border: var(--border);
-    padding: 1.2rem 1.4rem;
-    font-size: 1.3rem;
-    color: var(--black);
-}
-
-
 .message .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, 35rem);

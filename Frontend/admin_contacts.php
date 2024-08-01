@@ -54,7 +54,7 @@ if(mysqli_num_rows($select_message)> 0){
 <p> email: <span><?php echo $fetch_message['email']; ?></span></p>
 <p> message : <span><?php echo $fetch_message['message']; ?></span></p>
 <a  href="admin_contacts.php?delete=<?php echo $fetch_message['id']; ?>" onclick="return confirm('delete this message?');"
-    class="delete-btn">delete message</a>
+    class="delete-btn">Delete message</a>
     </div>
     <?php
     };

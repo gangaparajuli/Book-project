@@ -1,27 +1,3 @@
-// let navbar = document.querySelector('.header .navbar');
-// let accountBox = document.querySelector('.header. account-box');
-
-
-// DocumentFragment.querySelector('menu-btn').onclick =() =>{
-//     navbar.classList.toggle('active');
-//     accountBox.classList.remove('active');
-// }
-
-// document.querySelector('#user-btn').onclick = () =>{
-//     accountBox.classList.toggle('active');
-//     navbar.classList.remove('active');
-    
-//     }
-//     window.onscroll = () =>{
-//         navbar.classList.remove('active');
-//         accountBox.classList.remove('active');
-//     }
-
-//     document.querySelector('#close-update').onclick = () =>{
-//        document.querySelector('.edit-book-form').style.display = 'none';
-//        window.location.href = 'admin_books.php';
-//     }
-
 
 let navbar = document.querySelector('.header .navbar');
 let accountBox = document.querySelector('.header .account-box');

@@ -15,6 +15,7 @@ header('location.login.php');
 }
 ?>
 
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,14 +23,14 @@ header('location.login.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact</title>
 
-<!-- font awesome cdn link-->
+ font awesome cdn link
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/front-awesome/6.0.0/css/all.min.css">
 
-<!--custom css file link -->
+custom css file link 
 <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
+<body> -->
     
 <?php
 include 'header.php';
