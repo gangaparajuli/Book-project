@@ -6,7 +6,7 @@
 .navbar{
     display: flex;
     align-items:center;
-    padding:30px;
+    padding:35px;
 
 }
 nav{
@@ -168,12 +168,15 @@ ul{
 .copyright{
     text-align :center ;
 }
-.menu-icon{
+
+
+
+/* .menu-icon{    
 margin-left: 30px;
-padding:35px;
-display: none;
-cursor: pointer;
-}
+padding: 35px;
+display: block;
+cursor: pointer; }*/
+
 /* All Products */
 .row-2{
 justify-content: space-between;
@@ -208,13 +211,13 @@ select:focus{
 
 }
 /*  media query for menu */
-@media only screen and (max-width: 800px){
+/* @media only screen and (max-width: 800px){
     nav ul{
         position: absolute;
         top: 70px;
         left: 0;
         width: 100%;
-        overflow:hidden;
+        overflow: hidden;
         transition: max-height 0.5s;
         text-align: right;
 
@@ -236,16 +239,16 @@ select:focus{
     }
 }
 /* media query for less than 600 screen size */
- @media only screen and (max-width: 600px){
+ /* @media only screen and (max-width: 600px){
     .row{
         text-align: center;
     };
      .col-2, .col-3, .col-4{
         flex-basis: 100%;
 
-     }
+     } */ 
 
- }
+ /* } */
  /* Modal Styles */
 .modal {
     display: none; 
@@ -402,4 +405,62 @@ p {
     margin-bottom: 20px;
     text-align: justify;
 }
+/* cart items */
+.cart-page{
+    margin: 80px auto;
 
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: white;
+   background-color: hwb(240 1% 80% / 0.845);
+    font-weight: normal;
+}
+td{
+    padding: 10px 5px;
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+td a{
+    color: hwb(240 1% 80% / 0.845);
+    font-size: 12px;
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+
+}
+.total-price table{
+     border-top: 3px solid hwb(240 1% 80% / 0.845) ;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+
+
+}
+td:last-child{
+    text-align: right;
+    
+}
+th:last-child{
+    text-align: right;
+}

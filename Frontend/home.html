@@ -21,14 +21,16 @@
                         <li><a href="About.html">About Us</a></li>
                         <li><a href="Contact.html">Contact Us</a></li>
                     </ul>
-                </nav>
+                    </nav>
                 <div class="right">
                     <a href="login.html"> <button class="btn" id="loginBtn">Log In</button></a>
                       <a href="signup.html" ><button class="btn" id="signupBtn">Sign Up</button></a>
                 </div>
-                <img src="cart.png" width="30px" height="30px" class="cart-icon">
-                <img src="menu.png" width="28px" height="20px" class="menu-icon" onclick="menutoggle()">
+                 <a href="cart1.html"> <img src="cart.png" width="30px" height="30px"  padding="25px" class="cart-icon">
+                <img src="menu.png" width="28px" height="20px" padding="25px" class="menu-icon" onclick="menutoggle()">
+            
             </div>
+    
             <div class="row">
                 <div class="col-2">
                     <h1>Reading Made Affordable <br>and Easy.</h1>
@@ -62,24 +64,21 @@
             <h2 class="title">Romance</h2>
             <div class="row">
                 <div class="col-4">
-                    <img src="bk1.jpeg">
-                    <h4>Candice</h4>
-                    <p>Rs.100</p>
+                    <img src="/images/me before you.jpg">
+                    <h4>Me Before You</h4>
+                
                 </div>
                 <div class="col-4">
-                    <img src="bk1.jpeg">
-                    <h4>Candice</h4>
-                    <p>Rs.100</p>
+                    <img src="/images/Pride&Prejudice.jpg">
+                    <h4>Pride&Prejudice</h4>
                 </div>
                 <div class="col-4">
-                    <img src="bk1.jpeg">
-                    <h4>Candice</h4>
-                    <p>Rs.100</p>
+                    <img src="/images/The love hypothesis.jpg">
+                    <h4>The Love Hypothesis</h4>
                 </div>
                 <div class="col-4">
-                    <img src="bk1.jpeg">
-                    <h4>Candice</h4>
-                    <p>Rs.100</p>
+                    <img src="/images/TheNotebook.jpg">
+                    <h4>The Notebook</h4>
                 </div>
             </div>
         </div>
@@ -89,76 +88,45 @@
             <h2 class="title">Sci-fi</h2>
             <div class="row">
                 <div class="col-4">
-                    <img src="bk1.jpeg">
-                    <h4>Candice</h4>
-                    <p>Rs.100</p>
+                    <img src="/images/Dune.jpg">
+                    <h4>Dune</h4>
                 </div>
                 <div class="col-4">
-                    <img src="bk1.jpeg">
-                    <h4>Candice</h4>
-                    <p>Rs.100</p>
+                    <img src="/images/Neuromancer.jpg">
+                    <h4>Neuromancer</h4>
                 </div>
                 <div class="col-4">
-                    <img src="bk1.jpeg">
-                    <h4>Candice</h4>
-                    <p>Rs.100</p>
+                    <img src="/images/Enders game.jpg">
+                    <h4>Enders Game</h4>
                 </div>
                 <div class="col-4">
-                    <img src="bk1.jpeg">
-                    <h4>Candice</h4>
-                    <p>Rs.100</p>
+                    <img src="/images/A wrinkle in time.jpg">
+                    <h4>A wrinkle in time</h4>
                 </div>
             </div>
         </div>
-    
+        
         <!-- Non-fiction Section -->
         <div class="small-container">
-            <h2 class="title">Non-fiction</h2>
+            <h2 class="title">Text-Book</h2>
             <div class="row">
                 <div class="col-4">
-                    <img src="bk1.jpeg">
-                    <h4>Candice</h4>
-                    <p>Rs.100</p>
+                    <img src="/images/stat.jpg">
+                    <h4>Statistics</h4>
                 </div>
                 <div class="col-4">
-                    <img src="bk1.jpeg">
-                    <h4>Candice</h4>
-                    <p>Rs.100</p>
+                    <img src="/images/dbms.jpg">
+                    <h4>DBMS</h4>
                 </div>
                 <div class="col-4">
-                    <img src="bk1.jpeg">
-                    <h4>Candice</h4>
-                    <p>Rs.100</p>
+                    <img src="/images/markering.jpg">
+                    <h4>Marketing</h4>
                 </div>
                 <div class="col-4">
-                    <img src="bk1.jpeg">
-                    <h4>Candice</h4>
-                    <p>Rs.100</p>
-                </div>
+                    <img src="/images/accounting.jpg">
+                    <h4>accounting</h4>
+                    </div>
             </div>
-            <div class="row">
-                <div class="col-4">
-                    <img src="bk1.jpeg">
-                    <h4>Candice</h4>
-                    <p>Rs.100</p>
-                </div>
-                <div class="col-4">
-                    <img src="bk1.jpeg">
-                    <h4>Candice</h4>
-                    <p>Rs.100</p>
-                </div>
-                <div class="col-4">
-                    <img src="bk1.jpeg">
-                    <h4>Candice</h4>
-                    <p>Rs.100</p>
-                </div>
-                <div class="col-4">
-                    <img src="bk1.jpeg">
-                    <h4>Candice</h4>
-                    <p>Rs.100</p>
-                </div>
-            </div>
-        </div>
     
         <!-- Footer -->
         <div class="footer">
@@ -179,6 +147,19 @@
             <hr>
             <p class="copyright">Copyright 2024- Book Companion</p>
         </div>
-
+        <!-- js for togglemenu -->
+         <script>
+            var MenuItems = document.getElementById("MenuItems");
+            MenuItems.style.maxHeight = "0px";
+            function menutoggle(){
+                if(MenuItems.style.maxHeight == "0px")
+                {
+                    MenuItems.style.maxHeight = "200px"
+                }
+                else{
+                    MenuItems.style.maxHeight = "0px"
+                }
+            }
+         </script>
 </body>
 </html>
