@@ -1,8 +1,19 @@
+
 <?php
 
+<<<<<<< Updated upstream
 //include the configuration file to establish database connection
 include 'config.php';
 
+=======
+include 'config.php'; // Include database configuration
+session_start(); // Start the session
+
+if (isset($_POST['submit'])) { // Check if the form has been submitted
+    // Get the username and password from the form using the correct names
+    $username = mysqli_real_escape_string($conn, $_POST['username']); // Corrected: changed 'name' to 'username'
+    $password = mysqli_real_escape_string($conn, md5($_POST['password'])); // No changes needed here
+>>>>>>> Stashed changes
 
  session_start();
  if(isset($_POST['submit'])){
@@ -12,6 +23,7 @@ include 'config.php';
     //execute the query to find the user with the provided username and password.
     $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE name ='$username'  AND password = '$password'") or die('query failed');
 
+<<<<<<< Updated upstream
     //check  if any user is found with the given credentials.
     if(mysqli_num_rows($select_users) > 0){
 
@@ -30,6 +42,32 @@ elseif($row['user_type'] == 'rentee'){
     $_SESSION ['user_password'] =$row['password'];
     $_SESSION['user_id'] = $row['id'];
 header("location:home.html");
+=======
+        // Admin login check
+        if ($row['user_type'] == 'admin') {
+            $_SESSION['admin_name'] = $row['username'];
+            $_SESSION['admin_password'] = $row['password'];
+            $_SESSION['admin_id'] = $row['id'];
+            header('location:admin_page.html'); // Redirect to admin page
+        }
+        // Rentee login check
+        elseif ($row['user_type'] == 'Rentee') {
+            $_SESSION['rentee_name'] = $row['username']; // Corrected: changed 'renter_name' to 'rentee_name'
+            $_SESSION['rentee_password'] = $row['password'];
+            $_SESSION['rentee_id'] = $row['id'];
+            header('location:home.html'); // Redirect to home page
+        }
+        // Renter login check
+        elseif ($row['user_type'] == 'Renter') {
+            $_SESSION['renter_name'] = $row['username']; // Corrected: changed 'rentee_name' to 'renter_name'
+            $_SESSION['renter_password'] = $row['password'];
+            $_SESSION['renter_id'] = $row['id'];
+            header('location:home.html'); // Redirect to home page
+        }
+    } else {
+        $message[] = 'Incorrect username or password!';
+    }
+>>>>>>> Stashed changes
 }
 
 elseif($row['user_type'] == 'renter'){
@@ -90,6 +128,7 @@ echo '
                 <img src="menu.png" width="28px" height="20px" class="menu-icon" onclick="menutoggle()">
             </div>
         </div>
+<<<<<<< Updated upstream
     </div>
 
     <div class="login-container">
@@ -111,4 +150,10 @@ echo '
     </div>
 </body>
 </html>
+=======
+        ';
+    }
+}
+?>
+>>>>>>> Stashed changes
 
